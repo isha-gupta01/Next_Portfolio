@@ -4,7 +4,7 @@ import React from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { useState, useEffect } from "react";
 import grainImage from "@/assets/images/grain.jpg"
-import Shapes from "@/components/shapes";
+import Shapes from "@/components/Shapes";
 import Arrow from "@/assets/images/arrow.png"
 import Image from "next/image";
 
