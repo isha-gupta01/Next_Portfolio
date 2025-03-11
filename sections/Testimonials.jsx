@@ -1,0 +1,115 @@
+import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
+import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
+import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
+import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
+import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import SectionHeader from "@/components/SectionHeader";
+import Image from "next/image";
+// import grainImage from "@/assets/images/grain.jpg"
+import Card from "@/components/Card";
+import Link from "next/link";
+
+const testimonials = [
+  {
+    name: "CleverBooks.ai",
+    position: "Tool for demand forecasting, inventory planning.",
+    text: "CleverBooks is an AI-powered supply chain software that provides companies tools for demand forecastin inventory planning and more.This helps them have the right amount of stock, optimise space and fulfil every order.",
+    avatar: memojiAvatar1,
+    link: "https://isha-gupta01.github.io/CleverBooks.ai/",
+  },
+  {
+    name: "BitLinks",
+    position: "URL Shortener",
+    text: "A URL shortener is a tool that converts a long URL into a shorter, more manageable link while still directing users to the original destination. URL shorteners work by generating a unique key or code that is mapped to the original long URL and storing this mapping in a database. ",
+    avatar: memojiAvatar2,
+    link: "https://bit-links-beryl.vercel.app/",
+  },
+  {
+    name: "Spotify Clone",
+    position: "CEO @ InnovateCo",
+    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    avatar: memojiAvatar3,
+    link: "https://isha-gupta01.github.io/spotify/",
+  },
+  {
+    name: "Emily Carter",
+    position: "Product Manager @ GlobalTech",
+    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    avatar: memojiAvatar4,
+    link: "#"
+  },
+  {
+    name: "Drumkit",
+    position: "Unleash the Beat – Play Anytime!",
+    text: "Drumkit project using JavaScript, allowing users to play sounds by clicking specific keys or buttons. Implemented event listeners to detect key presses and trigger corresponding drum sounds in real-time.",
+    avatar: memojiAvatar5,
+    link: "https://isha-gupta01.github.io/DrumKit-01/",
+  },
+  {
+    name: "CleverBooks.ai",
+    position: "Tool for demand forecasting, inventory planning.",
+    text: "CleverBooks is an AI-powered supply chain software that provides companies tools for demand forecastin inventory planning and more.This helps them have the right amount of stock, optimise space and fulfil every order.",
+    avatar: memojiAvatar1,
+    link: "https://isha-gupta01.github.io/CleverBooks.ai/",
+  },
+  {
+    name: "BitLinks",
+    position: "URL Shortener",
+    text: "A URL shortener is a tool that converts a long URL into a shorter, more manageable link while still directing users to the original destination. URL shorteners work by generating a unique key or code that is mapped to the original long URL and storing this mapping in a database. ",
+    avatar: memojiAvatar2,
+    link: "https://bit-links-beryl.vercel.app/",
+  },
+  {
+    name: "Spotify Clone",
+    position: "CEO @ InnovateCo",
+    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    avatar: memojiAvatar3,
+    link: "https://isha-gupta01.github.io/spotify/",
+  },
+  {
+    name: "Emily Carter",
+    position: "Product Manager @ GlobalTech",
+    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    avatar: memojiAvatar4,
+    link: "#"
+  },
+  {
+    name: "Drumkit",
+    position: "Unleash the Beat – Play Anytime!",
+    text: "Drumkit project using JavaScript, allowing users to play sounds by clicking specific keys or buttons. Implemented event listeners to detect key presses and trigger corresponding drum sounds in real-time.",
+    avatar: memojiAvatar5,
+    link: "https://isha-gupta01.github.io/DrumKit-01/",
+  },
+
+
+
+];
+
+export const TestimonialsSection = () => {
+  return (
+    <div className="py-16">
+      <div className="container">
+        <SectionHeader title="Beyond Basics" eyebrow="Happy Projects" description="Don't just take my word for it. See what my projects have to say about my work." />
+        <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:90s] 
+          hover:[animation-play-state:paused]">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="p-10 max-w-xs md:p-8 md:max-w-md hover:-rotate-3  transition duration-300">
+                <div className="flex gap-4 items-center ">
+                  <Link target="blank" href={testimonial.link} className=" size-14 bg-gray-700 inline-flex rounded-full flex-shrink-0 items-center justify-center shadow-[0_0_10px_3px_#6ee7b7] transition-all duration-300 animate-glow">
+                    <Image src={testimonial.avatar} alt="icons" width={80} height={80} className="rounded-full p-2" />
+                  </Link>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-white/40">{testimonial.position}</div>
+                  </div>
+                </div>
+                <p className="mt-4 md:mt-6 text-sm md:text-base">{testimonial.text}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+};

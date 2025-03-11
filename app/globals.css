@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .nav-item{
+        @apply px-4 hover:bg-white/10 hover:text-white transition duration-300 py-1.5 rounded-full text-white/70 text-sm font-semibold;
+    }
+    .hero-ring{
+        @apply absolute inset-0  border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5
+    }
+}
+
+
+@layer utilities{
+    .container{
+        @apply lg:max-w-5xl;
+    }
+    .card-wrapper {
+        @apply relative bg-gradient-to-b from-slate-600 to-slate-700 overflow-hidden rounded-xl;
+      }
+      
+      .card-wrapper::before {
+        content: ""; /* ✅ Required for pseudo-elements */
+        background: conic-gradient(
+            rgb(110, 231, 183) 0deg,
+            rgba(56, 189, 248) 60deg,
+          transparent 80deg
+        );
+        @apply h-[150%] w-[150%] left-[-25%] top-[-25%] absolute animate-border-spin;
+        z-index: 0; /* ✅ Ensures it stays behind the card */
+      }
+      
+      .card-content {
+        @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-[#232222] rounded-xl;
+        z-index: 10; /* ✅ Keeps the content above the animated border */
+      }
+      
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+  
+  
