@@ -13,6 +13,7 @@ export default {
       xs:"300px",
       sm:"375px",
       md:"768px",
+      xl:"1024px",
       lg:"1200px"
     },
     container:{
@@ -35,12 +36,21 @@ export default {
         "move-right":"move-right 1s linear infinite",
         "border-spin":'border-spin 7s linear infinite',
         "glow":'glow 1.5s infinite alternate',
+        "shine":"shine 1s infinte linear",
       },
       keyframes:{
         'ping-large':{
           '75%,100%':{
             transform:'scale(3)',
             opacity:'0',
+          }
+        },
+        "shine" :{
+          "0%": {
+            left: '-100%'
+          },
+          "100%": {
+            left: '100%'
           }
         },
         "move-left":{

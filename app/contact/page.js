@@ -52,11 +52,21 @@ const ContactPage = () => {
             });
 
             if (response.ok) {
-                toast.success('Email Sent Successfully!', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    theme: "dark"
-                });
+                toast.success(
+                    <div>
+                        <span style={{ color: '#82AAFF' }}>const </span>
+                        <span style={{ color: '#C3E88D' }}>message </span>
+                        <span style={{ color: '#F78C6C' }}>= </span>
+                        <span style={{ color: '#89DDFF' }}>"Email Sent Successfully!"</span>
+                        <span style={{ color: '#C792EA' }}>;</span>
+                    </div>, 
+                    {
+                        position: "top-right",
+                        autoClose: 2000,
+                        theme: "dark",
+                        className: "coding-toast"
+                    }
+                );
 
                 setFormData({
                     Name: "",
@@ -68,11 +78,21 @@ const ContactPage = () => {
 
                 setErrors({});
             } else {
-                toast.error('Failed to Send Email!', {
-                    position: "top-right",
-                    autoClose: 1000,
-                    theme: "dark"
-                });
+                toast.error(
+                    <div>
+                        <span style={{ color: '#82AAFF' }}>const </span>
+                        <span style={{ color: '#C3E88D' }}>message </span>
+                        <span style={{ color: '#F78C6C' }}>= </span>
+                        <span style={{ color: '#89DDFF' }}>"Failed to send Email."</span>
+                        <span style={{ color: '#C792EA' }}>;</span>
+                    </div>, 
+                    {
+                        position: "top-right",
+                        autoClose: 2000,
+                        theme: "dark",
+                        className: "coding-toast"
+                    }
+                );
             }
         } catch (error) {
             console.error("Error submitting form:", error);
@@ -86,11 +106,28 @@ const ContactPage = () => {
         <>
             <ToastContainer />
 
-            <div className='flex flex-col font-doto  justify-center items-center  md:flex-col lg:flex-row lg:justify-evenly   md:w-[100vw] h-auto lg:h-[100vh] absolute inset-0  -z-20 bg-white/10 bg-[linear-gradient(to_right,#6ee7b733_2px,transparent_2px),linear-gradient(to_bottom,#6ee7b733_2px,transparent_2px)] bg-[size:140px_140px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_150%)]'>
+            <div className='flex bg-[#0A0F1A] flex-col font-doto  justify-center items-center  md:flex-col lg:flex-row lg:justify-evenly   md:w-[100vw] h-auto lg:h-[100vh] absolute inset-0  -z-20  [mask-image:linear-gradient(to_right,transparent,black_30%,black_90%,transparent)]'>
+                <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                        backgroundImage: `
+                        linear-gradient(90deg, 
+                            rgba(255,255,255,0.1) 1px, transparent 1px, 
+                            transparent 20px, 
+                            rgba(255,255,255,0.1) 21px, transparent 21px, 
+                            transparent 120px
+                        ),
+                        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                        backgroundSize: '530px 150px', // Adjust size of overall grid,
+                        backgroundPosition: "center"
+                    }}
+                ></div>
 
-                <div className=' md:w-1/3 h-3/4 xs:hidden  md:flex relative justify-center'>
-                    <div className="absolute -top-2 left-20 w-[30vw]"><Image src={Arrow} alt="arrow" width={100} height={100} className="invert" />
-                        <span className="absolute top-0 left-28">Feel Free To Play !!!</span>
+                {/* Spotlight effect */}
+                <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] h-[600px] bg-white/10 blur-[120px] opacity-50"></div>
+                <div className=' md:w-1/3 h-3/4 xs:hidden  md:flex  justify-center'>
+                    <div className="absolute xs:left-52 xs:top-8 xl:top-8 xl:left-80 lg:top-20 lg:left-32 w-[30vw]"><Image src={Arrow} alt="arrow" width={100} height={100} className="invert" />
+                        <span className="absolute top-0 font-bold left-28 ">Feel Free To Play !!!</span>
                     </div>
                     <Shapes />
                 </div>
@@ -101,24 +138,17 @@ const ContactPage = () => {
 
 
                         <div className="card-content flex flex-col justify-center items-center py-10 px-10 overflow-hidden relative z-10">
-                            {/* 🔹 Background Image (Prevent Blocking Inputs) */}
-                            <div
-                                className="absolute inset-0 opacity-5 pointer-events-none"
-                                style={{
-                                    backgroundImage: `url(${grainImage.src})`,
-                                    backgroundSize: "cover",
-                                }}
-                            ></div>
+                            
 
                             {/* 🔹 Heading */}
-                            <div className="uppercase font-extrabold text-2xl font-doto tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text pb-8">
-                                Get in Touch with Me
-                            </div>
+                            <h1 className="text-2xl sm:text-3xl md:text-6xl  ml-5 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200 mb-10">
+                                Get In Touch
+                            </h1>
 
                             {/* 🔹 Form (Ensure Inputs are Clickable) */}
                             <form
                                 onSubmit={handleSubmit}
-                                className="h-[100%]  space-y-5 w-full text-green-300 text-xl relative z-20"
+                                className="h-[100%] mt-8 sm:mt-8 md:mt-6 font-extrabold space-y-5 w-full text-white text-xl  z-20"
                             >
                                 <div className="flex items-center gap-2">
                                     <label name="Name" htmlFor="input" className="whitespace-nowrap text-xl">NAME {'>>'}</label>
@@ -128,7 +158,7 @@ const ContactPage = () => {
                                         value={formData.Name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-green-300 text-lg bg-transparent rounded-lg  focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-lg bg-transparent rounded-lg  focus:outline-none "
                                     />
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -139,7 +169,7 @@ const ContactPage = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-green-300 text-sm bg-transparent  rounded-lg focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-sm bg-transparent  rounded-lg focus:outline-none "
                                     />
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -150,17 +180,19 @@ const ContactPage = () => {
                                         value={formData.inquiry}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-green-300 text-sm bg-transparent  rounded-lg focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-sm bg-transparent  rounded-lg focus:outline-none "
                                     ></textarea>
                                 </div>
-                                <button
-                                    type="submit"
-                                    className={`w-1/2 absolute bottom-20 right-0 px-4  py-3 border-green-300 border-dotted border-2 text-white  rounded-lg  transition ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : ""
-                                        }`}
-                                    disabled={isSubmitting}
-                                >
-                                    {isSubmitting ? "Firing Right Away..." : "Fire Away"}
-                                </button>
+                                <div className="flex justify-end ">
+                                    <button
+                                        type="submit"
+                                        className={`w-[20rem]  sm:text-white  px-4  mt-20  py-3 border-white border-dotted border-2 text-white  rounded-lg  transition ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : ""
+                                            }`}
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? "Firing Right Away..." : "Fire Away"}
+                                    </button>
+                                </div>
                             </form>
                         </div>
 
