@@ -1,11 +1,9 @@
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
+import memojiAvatar3 from "@/assets/icons/icon.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
-// import grainImage from "@/assets/images/grain.jpg"
 import Card from "@/components/Card";
 import Link from "next/link";
 
@@ -25,18 +23,11 @@ const testimonials = [
     link: "https://bit-links-beryl.vercel.app/",
   },
   {
-    name: "Spotify Clone",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Vistora",
+    position: "E-Commerce Website",
+    text: "Vistora is your modern marketplace where trends meet convenience. From timeless classics to tomorrow’s essentials, Vistora offers a curated shopping experience that's as dynamic as your lifestyle. Dive into a world where innovation, style, and unbeatable deals come together — making every click a new discovery.",
     avatar: memojiAvatar3,
-    link: "https://isha-gupta01.github.io/spotify/",
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-    link: "#"
+    link: "https://e-comm-frontend-sandy.vercel.app/",
   },
   {
     name: "Drumkit",
@@ -60,18 +51,11 @@ const testimonials = [
     link: "https://bit-links-beryl.vercel.app/",
   },
   {
-    name: "Spotify Clone",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Vistora",
+    position: "E-Commerce Website",
+    text: "Vistora is your modern marketplace where trends meet convenience. From timeless classics to tomorrow’s essentials, Vistora offers a curated shopping experience that's as dynamic as your lifestyle. Dive into a world where innovation, style, and unbeatable deals come together — making every click a new discovery.",
     avatar: memojiAvatar3,
-    link: "https://isha-gupta01.github.io/spotify/",
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-    link: "#"
+    link: "https://e-comm-frontend-sandy.vercel.app/",
   },
   {
     name: "Drumkit",
@@ -91,7 +75,7 @@ export const TestimonialsSection = () => {
       <div className="container">
         <SectionHeader title="Beyond Basics" eyebrow="Happy Projects" description="Don't just take my word for it. See what my projects have to say about my work." />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:90s] 
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:20s] 
           hover:[animation-play-state:paused]">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="p-10 max-w-xs md:p-8 md:max-w-md hover:-rotate-3  transition duration-300">
