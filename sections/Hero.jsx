@@ -1,6 +1,7 @@
 "use client"
 import memojiImage from '@/assets/images/memoji-computer.png'
 import ArrowDownU from '@/assets/icons/arrow-down.svg'
+import ArrowUpRight from '@/assets/icons/arrow-up-right.svg'
 import Image from 'next/image'
 import grainImage from "@/assets/images/grain.jpg"
 import StarIcon from "@/assets/icons/star.svg"
@@ -86,6 +87,10 @@ export const HeroSection = () => {
                     <Link href="#projects"  className='inline-flex z-50 cursor-pointer  items-center gap-2 border border-white/15 px-6 h-12 rounded-xl '>
                         <span className='font-semibold'>Explore My Work</span>
                         <ArrowDownU className="size-4" />
+                    </Link>
+                    <Link href="https://drive.google.com/file/d/1PvdZ2zRSBM-NAnaFxmbQc32QVCb8GgGL/view" target='_blank'  className='inline-flex  z-50 cursor-pointer  items-center gap-2 border border-white/15 px-6 h-12 rounded-xl '>
+                        <span className='font-semibold'>Download Resume</span>
+                        <ArrowUpRight className="size-4" />
                     </Link>
                     <Link href="#contact" className='inline-flex items-center z-50   gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl '>
                         <span>👋</span>
