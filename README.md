@@ -2,7 +2,7 @@
 
 Welcome to my **developer portfolio**, crafted using **Next.js**, **Tailwind CSS**, and a touch of creativity. This project showcases who I am, what I build, and how I bring ideas to life with clean design and optimized performance.
 
-Live Site 👉 [next-portfolio-theta-smoky-94.vercel.app](https://next-portfolio-theta-smoky-94.vercel.app)
+Live Site 👉 [next-portfolio-ishagupta.vercel.app/](https://next-portfolio-ishagupta.vercel.app/)
 
 ---
 
@@ -53,15 +53,6 @@ Hi, I'm **Isha Gupta**, a passionate **Full-Stack Web Developer** dedicated to b
 
 ---
 
-## 📷 Screenshots
-
-| 📱 Mobile View | 🖥️ Desktop View |
-|---------------|-----------------|
-| ![Mobile](https://res.cloudinary.com/duiryov1p/image/upload/w_500/v1753700712/next-portfolio-ishagupta.vercel.app__iPhone_12_Pro_uvmgmz.png) 
-| ![Desktop](https://res.cloudinary.com/duiryov1p/image/upload/v1753700719/w_800/next-portfolio-ishagupta.vercel.app__Nest_Hub_Max_ptfxno.png) |
-
-
----
 
 ## 🚀 Deployment
 
@@ -73,6 +64,15 @@ https://next-portfolio-theta-smoky-94.vercel.app
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
