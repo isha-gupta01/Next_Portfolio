@@ -1,3 +1,79 @@
+# 🚀 Isha Gupta - Next.js Developer Portfolio
+
+Welcome to my **developer portfolio**, crafted using **Next.js**, **Tailwind CSS**, and a touch of creativity. This project showcases who I am, what I build, and how I bring ideas to life with clean design and optimized performance.
+
+Live Site 👉 [next-portfolio-ishagupta.vercel.app/](https://next-portfolio-ishagupta.vercel.app/)
+
+---
+
+## ✨ About Me
+
+Hi, I'm **Isha Gupta**, a passionate **Full-Stack Web Developer** dedicated to building scalable web apps with modern technologies. My expertise spans across React, Next.js, Node.js, MongoDB, and UI/UX best practices. This portfolio reflects my journey, skills, and the projects that shaped my learning curve.
+
+---
+
+## 🛠 Tech Stack
+
+| Category         | Technologies                          |
+|------------------|---------------------------------------|
+| **Frontend**     | Next.js, React.js, Tailwind CSS       |
+| **Backend**      | Node.js, Express.js                   |
+| **Database**     | MongoDB (via MongoDB Atlas)           |
+| **Deployment**   | Vercel                                |
+| **Version Control** | Git, GitHub                        |
+| **Animations & Effects** | Framer Motion, Tailwind Transitions |
+
+---
+
+## 📁 Project Structure
+
+```bash
+├── app/ # Next.js App Router Pages
+│ ├── about/ # About section
+│ ├── contact/ # Contact form
+│ └── projects/ # Project listings
+├── components/ # Reusable UI Components
+├── public/ # Static assets and images
+├── styles/ # Tailwind & global styles
+├── lib/ # Utility libraries
+└── README.md # You’re here!
+```
+
+
+---
+
+## 🎯 Features
+
+- ⚡ Fully responsive and mobile-friendly
+- 💻 Interactive project cards with hover effects
+- 🧠 Cleanly structured About Me and Skills sections
+- 📬 Working Contact Form (form handler ready)
+- 🌙 Dark mode toggle (optional enhancement)
+- 🎥 Smooth animations using **Framer Motion**
+
+---
+
+
+## 🚀 Deployment
+
+This portfolio is deployed on **Vercel** for high performance and ease of CI/CD:
+
+```bash
+https://next-portfolio-theta-smoky-94.vercel.app
+```
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
