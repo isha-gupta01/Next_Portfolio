@@ -17,14 +17,14 @@
         @apply lg:max-w-5xl;
     }
     .card-wrapper {
-        @apply relative bg-gradient-to-b from-slate-600 to-slate-700 overflow-hidden rounded-xl;
+        @apply relative  overflow-hidden rounded-xl;
       }
       
       .card-wrapper::before {
         content: ""; /* ✅ Required for pseudo-elements */
         background: conic-gradient(
-          rgba(216, 236, 248, 0.4) 0deg,
-          rgba(184, 216, 254, 0.4) 60deg,
+          #C0C0C0 0deg,
+          #C0C0C0 60deg,
           transparent 80deg
         );
         @apply h-[150%] w-[150%] left-[-25%] top-[-25%] absolute animate-border-spin;
@@ -32,7 +32,7 @@
       }
       
       .card-content {
-        @apply absolute w-[calc(100%-5px)] h-[calc(100%-5px)] top-[2.5px] left-[2.5px] bg-[#0a0f1a] rounded-xl;
+        @apply absolute w-[calc(100%-5px)] h-[calc(100%-5px)] top-[2.5px] left-[2.5px] bg-gradient-to-r from-emerald-300 to-sky-400 rounded-xl;
         z-index: 10; /* ✅ Keeps the content above the animated border */
       }
       
@@ -40,9 +40,9 @@
 
 input, textarea {
   background-color: transparent;
-  color: #dcdcdc;
+  color: black;
   border-bottom: 2px solid #555;
-  caret-color: #82AAFF; /* Blinking caret color */
+  caret-color: black; /* Blinking caret color */
 }
 
 input::placeholder, textarea::placeholder {
@@ -52,7 +52,7 @@ input::placeholder, textarea::placeholder {
 
 input:focus, textarea:focus {
   outline: none;
-  caret-color: #82AAFF;
+  caret-color: #1E1E1E;
 }
 
 .coding-toast {

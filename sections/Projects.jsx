@@ -38,11 +38,23 @@ const portfolioProjects = [
     year: "2025",
     title: "GHE Academy",
     results: [
+      { title: "School's CBSE Affliation Accepted" },
+      { title: "Improved site speed by 50%" },
+      { title: "Improved Search Engine Optimization" },
+    ],
+    link: "https://www.greenheavenacademy.in/",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "Personal Project",
+    year: "2025",
+    title: "Vistora-EComm",
+    results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://www.greenheavenacademy.in/",
+    link: "https://vistora-ecomm.vercel.app/",
     image: aiStartupLandingPage,
   },
 ];

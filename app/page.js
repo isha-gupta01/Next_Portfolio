@@ -7,17 +7,19 @@ import { AboutSection } from "@/sections/About";
 import ContactSection  from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import {Experience} from "@/sections/Experience";
+import MainContact from "@/sections/MainContact";
 export default function Home() {
   return (
     <div id="home">
       <div className="z-50"><Header/></div>
       <HeroSection/>
+      <ContactSection/>
       <ProjectsSection/>
       <TapeSection/>
       <TestimonialsSection/>
       <Experience/>
       <div className="z-10"><AboutSection/></div>
-      <ContactSection/>
+      <MainContact/>
       <Footer/>
     </div>
   );

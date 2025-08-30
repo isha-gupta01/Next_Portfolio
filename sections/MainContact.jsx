@@ -7,6 +7,9 @@ import grainImage from "@/assets/images/grain.jpg"
 import Shapes from "@/components/Shapes";
 import Arrow from "@/assets/images/arrow.png"
 import Image from "next/image";
+import { motion } from "framer-motion"
+import { IoMdRocket } from "react-icons/io";
+
 
 
 
@@ -59,7 +62,7 @@ const ContactPage = () => {
                         <span style={{ color: '#F78C6C' }}>= </span>
                         <span style={{ color: '#89DDFF' }}>"Email Sent Successfully!"</span>
                         <span style={{ color: '#C792EA' }}>;</span>
-                    </div>, 
+                    </div>,
                     {
                         position: "top-right",
                         autoClose: 2000,
@@ -85,7 +88,7 @@ const ContactPage = () => {
                         <span style={{ color: '#F78C6C' }}>= </span>
                         <span style={{ color: '#89DDFF' }}>"Failed to send Email."</span>
                         <span style={{ color: '#C792EA' }}>;</span>
-                    </div>, 
+                    </div>,
                     {
                         position: "top-right",
                         autoClose: 2000,
@@ -103,25 +106,11 @@ const ContactPage = () => {
     };
 
     return (
-        <>
+        <div id="mainContact" >
             <ToastContainer />
 
-            <div className='flex bg-[#0A0F1A] flex-col font-doto  justify-center items-center  md:flex-col lg:flex-row lg:justify-evenly   md:w-[100vw] h-auto lg:h-[100vh] absolute inset-0  -z-20  [mask-image:linear-gradient(to_right,transparent,black_30%,black_90%,transparent)]'>
-                <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                        backgroundImage: `
-                        linear-gradient(90deg, 
-                            rgba(255,255,255,0.1) 1px, transparent 1px, 
-                            transparent 20px, 
-                            rgba(255,255,255,0.1) 21px, transparent 21px, 
-                            transparent 120px
-                        ),
-                        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                        backgroundSize: '530px 150px', // Adjust size of overall grid,
-                        backgroundPosition: "center"
-                    }}
-                ></div>
+            <div   className='flex relative flex-col font-doto  justify-center items-center  md:flex-col lg:flex-row lg:justify-evenly   md:w-full h-auto lg:h-[100vh]    z-20  '>
+
 
                 {/* Spotlight effect */}
                 <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] h-[600px] bg-white/10 blur-[120px] opacity-50"></div>
@@ -138,17 +127,19 @@ const ContactPage = () => {
 
 
                         <div className="card-content flex flex-col justify-center items-center py-10 px-10 overflow-hidden relative z-10">
-                            
+                            <div className='absolute inset-0 opacity-5 -z-10' style={{ backgroundImage: `url(${grainImage.src})` }}></div>
+
+
 
                             {/* 🔹 Heading */}
-                            <h1 className="text-2xl sm:text-3xl md:text-6xl  ml-5 font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200 mb-10">
+                            <h1 className="text-2xl sm:text-3xl md:text-6xl  ml-5 font-bold tracking-tight bg-clip-text text-black mb-10">
                                 Get In Touch
                             </h1>
 
                             {/* 🔹 Form (Ensure Inputs are Clickable) */}
                             <form
                                 onSubmit={handleSubmit}
-                                className="h-[100%] mt-8 sm:mt-8 md:mt-6 font-extrabold space-y-5 w-full text-white text-xl  z-20"
+                                className="h-[100%] mt-8 sm:mt-8 md:mt-6 font-extrabold space-y-5 w-full text-black text-xl  z-20"
                             >
                                 <div className="flex items-center gap-2">
                                     <label name="Name" htmlFor="input" className="whitespace-nowrap text-xl">NAME {'>>'}</label>
@@ -158,10 +149,10 @@ const ContactPage = () => {
                                         value={formData.Name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-lg bg-transparent rounded-lg  focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-black text-lg bg-transparent rounded-lg  focus:outline-none "
                                     />
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center text-black gap-2">
                                     <label name="email" htmlFor="input" className="whitespace-nowrap text-xl">EMAIL {'>>'}</label>
                                     <input
                                         type="email"
@@ -169,7 +160,7 @@ const ContactPage = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-sm bg-transparent  rounded-lg focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-black text-sm bg-transparent  rounded-lg focus:outline-none "
                                     />
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -180,18 +171,34 @@ const ContactPage = () => {
                                         value={formData.inquiry}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-3 py-3 border-b-2 border-dotted border-white text-sm bg-transparent  rounded-lg focus:outline-none "
+                                        className="w-full px-3 py-3 border-b-2 border-dotted border-black text-sm bg-transparent  rounded-lg focus:outline-none "
                                     ></textarea>
                                 </div>
-                                <div className="flex justify-end ">
-                                    <button
+                                <div className="flex justify-center ">
+                                    <motion.button
                                         type="submit"
-                                        className={`w-[20rem]  sm:text-white  px-4  mt-20  py-3 border-white border-dotted border-2 text-white  rounded-lg  transition ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : ""
-                                            }`}
-                                        disabled={isSubmitting}
+                                        disabled={!isSubmitting}
+                                        className="flex justify-center"
+                                        whileInView={
+                                            isSubmitting ? {
+                                                y: [0, -4, -2, -4, -2, -4, 0],
+                                                scale: 1.05,
+                                                transition: {
+                                                    y: { repeat: Infinity, duration: 0.8, repeatType: "loop" },
+                                                    scale: { duration: 0.2 }
+                                                }
+                                            } : {}}
                                     >
-                                        {isSubmitting ? "Firing Right Away..." : "Fire Away"}
-                                    </button>
+
+                                        <button
+                                            type="submit"
+                                            className={`text-white bg-gray-900 mt-20 cursor-pointer inline-flex justify-center items-center px-6 h-12 rounded-xl gap-2 w-[13rem]  border border-gray-900  transition ${isSubmitting ? "bg-black cursor-not-allowed" : ""
+                                                }`}
+                                            disabled={isSubmitting}
+                                        >
+                                            {isSubmitting ? <IoMdRocket className="text-3xl mx-auto text-cyan-500" /> : "Fire Away"}
+                                        </button>
+                                    </motion.button>
                                 </div>
                             </form>
                         </div>
@@ -202,7 +209,7 @@ const ContactPage = () => {
 
             </div>
 
-        </>
+        </div>
     )
 
 }
