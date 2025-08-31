@@ -8,6 +8,12 @@ import CSSIcon from "@/assets/icons/css3.svg"
 import ReactIcon from "@/assets/icons/react.svg"
 import ChromeIcon from "@/assets/icons/chrome.svg"
 import GitHibIcon from "@/assets/icons/github.svg"
+import GitIcon from "@/assets/icons/git.svg"
+import NextJsIcon from "@/assets/icons/nextjs.svg"
+import NodeJsIcon from "@/assets/icons/nodejs.svg"
+import MongoDbIcon from "@/assets/icons/mongodb.svg"
+import ExpressJsIcon from "@/assets/icons/expressjs.svg"
+import TailwindCssIcon from "@/assets/icons/tailwindcss.svg"
 import Image from "next/image";
 import mapImage from "@/assets/images/map.png"
 import smileMemoji from "@/assets/images/memoji-smile.png"
@@ -30,16 +36,36 @@ const toolboxItems = [
     iconType: CSSIcon,
   },
   {
-    title: 'React',
+    title: 'NodeJS',
+    iconType: NodeJsIcon,
+  },
+  {
+    title: 'ReactJS',
     iconType: ReactIcon,
   },
   {
-    title: 'Chrome',
-    iconType: ChromeIcon,
+    title: 'MongoDB',
+    iconType: MongoDbIcon,
+  },
+  {
+    title: 'ExpressJS',
+    iconType: ExpressJsIcon,
+  },
+  {
+    title: 'NextJs',
+    iconType: NextJsIcon,
+  },
+  {
+    title: 'TailwindCSS',
+    iconType: TailwindCssIcon,
   },
   {
     title: 'GitHub',
     iconType: GitHibIcon,
+  },
+  {
+    title: 'Git',
+    iconType: GitIcon,
   },
   {
     title: 'JavaScript',
@@ -54,16 +80,36 @@ const toolboxItems = [
     iconType: CSSIcon,
   },
   {
+    title: 'NodeJS',
+    iconType: NodeJsIcon,
+  },
+  {
     title: 'React',
     iconType: ReactIcon,
   },
   {
-    title: 'Chrome',
-    iconType: ChromeIcon,
+    title: 'MongoDB',
+    iconType: MongoDbIcon,
+  },
+  {
+    title: 'ExpressJS',
+    iconType: ExpressJsIcon,
+  },
+  {
+    title: 'NextJs',
+    iconType: NextJsIcon,
+  },
+  {
+    title: 'TailwindCSS',
+    iconType: TailwindCssIcon,
   },
   {
     title: 'GitHub',
     iconType: GitHibIcon,
+  },
+  {
+    title: 'Git',
+    iconType: GitIcon,
   },
 ]
 
@@ -75,19 +121,19 @@ const hobbies = [
     top: "5%"
   },
   {
-    title: 'Photography',
+    title: 'Travelling',
     emoji: '📷',
     left: "50%",
     top: "5%"
   },
   {
-    title: 'Gaming',
+    title: 'Coding',
     emoji: '🎮',
     left: "10%",
     top: "35%"
   },
   {
-    title: 'Hiking',
+    title: 'Finding issues',
     emoji: '🥾',
     left: "35%",
     top: "45%"

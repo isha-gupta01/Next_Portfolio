@@ -12,17 +12,13 @@ import { motion } from "framer-motion";
     "Git": "#f05032",          // Git orange-red
     "GitHub": "#171515",       // GitHub dark
     "Bootstrap": "#7952b3",    // Bootstrap purple
-    "jQuery": "#0769ad",       // jQuery blue
     "ExpressJS": "#000000",    // Express black
     "HTML": "#e34c26",         // HTML orange
     "HTML5": "#e34c26",        // HTML5 orange (same as HTML)
     "Next.js": "#000000",      // Next.js black
     "TailwindCSS": "#06b6d4",  // Tailwind cyan
     "Vercel": "#000000",       // Vercel black
-    ".NET": "#512bd4",         // .NET purple
-    "C#": "#178600",           // C# green
-    "AdonisJs": "#5a45ff",     // AdonisJs indigo
-    "MySQL": "#4479a1"         // MySQL blue
+
 };
 
 const lightBackgroundColors = [
