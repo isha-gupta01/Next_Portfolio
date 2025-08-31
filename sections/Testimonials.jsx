@@ -23,13 +23,6 @@ const testimonials = [
     link: "https://bit-links-beryl.vercel.app/",
   },
   {
-    name: "Vistora",
-    position: "E-Commerce Website",
-    text: "Vistora is your modern marketplace where trends meet convenience. From timeless classics to tomorrow’s essentials, Vistora offers a curated shopping experience that's as dynamic as your lifestyle. Dive into a world where innovation, style, and unbeatable deals come together — making every click a new discovery.",
-    avatar: memojiAvatar3,
-    link: "https://e-comm-frontend-sandy.vercel.app/",
-  },
-  {
     name: "Drumkit",
     position: "Unleash the Beat – Play Anytime!",
     text: "Drumkit project using JavaScript, allowing users to play sounds by clicking specific keys or buttons. Implemented event listeners to detect key presses and trigger corresponding drum sounds in real-time.",
@@ -49,13 +42,6 @@ const testimonials = [
     text: "A URL shortener is a tool that converts a long URL into a shorter, more manageable link while still directing users to the original destination. URL shorteners work by generating a unique key or code that is mapped to the original long URL and storing this mapping in a database. ",
     avatar: memojiAvatar2,
     link: "https://bit-links-beryl.vercel.app/",
-  },
-  {
-    name: "Vistora",
-    position: "E-Commerce Website",
-    text: "Vistora is your modern marketplace where trends meet convenience. From timeless classics to tomorrow’s essentials, Vistora offers a curated shopping experience that's as dynamic as your lifestyle. Dive into a world where innovation, style, and unbeatable deals come together — making every click a new discovery.",
-    avatar: memojiAvatar3,
-    link: "https://e-comm-frontend-sandy.vercel.app/",
   },
   {
     name: "Drumkit",
